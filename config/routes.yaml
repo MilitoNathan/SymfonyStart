@@ -3,3 +3,12 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+app_form:
+    path: /form
+    methods: [GET, POST]
+    controller: App\Controller\FormController::index

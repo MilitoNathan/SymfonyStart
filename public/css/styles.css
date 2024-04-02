@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-index-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-index-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-index-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.product-index-table th,
+.product-index-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-index-table th {
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.product-index-table td {
+    text-align: left;
+}
+
+.product-index-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-index-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.product-index-links .create-new {
+    background-color: #3498db;
+}
+
+/* Styles for Edit Product page */
+.edit-product-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.edit-product-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.edit-product-form {
+    margin-bottom: 20px;
+}
+
+.edit-product-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-product-form input[type="text"],
+.edit-product-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.edit-product-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-product-form button:hover {
+    background-color: #2980b9;
+}
+
+.edit-product-links {
+    text-align: center;
+}
+
+.edit-product-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.edit-product-links .back {
+    background-color: #3498db;
+}
+
+.edit-product-links .delete {
+    background-color: #e74c3c;
+}

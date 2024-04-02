@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire{% endblock %}
+
+{% block body %}
+    <style>
+
+        .delete-response{
+            display: flex;
+            justify-content: center;
+        }
+
+        .delete-responses-link {
+            display: inline-block;
+            padding: 5px 0;
+            background-color: #dc3545;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .delete-responses-link:hover {
+            background-color: #c82333;
+        }
+
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .response {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .response p {
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        .response p strong {
+            font-weight: bold;
+        }
+
+    </style>
+
+    <div class="example-wrapper">
+        <a href="{{ path('home') }}">Retour à la page principale</a>
+
+        <h1>Formulaire</h1>
+
+        {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.prenom) }}
+        {{ form_row(form.message) }}
+        {{ form_row(form.submit) }}
+        {{ form_end(form) }}
+
+        <div class="delete-response">
+            <a href="{{ path('delete_responses') }}" class="delete-responses-link">Supprimer les réponses</a>
+        </div>
+
+        <h2>Réponses précédentes :</h2>
+        {% if responses %}
+            {% for response in responses %}
+                <div class="response">
+                    <p><strong>Nom :</strong> {{ response.name }}</p>
+                    <p><strong>Prénom :</strong> {{ response.prenom }}</p>
+                    <p><strong>Message :</strong> {{ response.message }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Aucune réponse disponible.</p>
+        {% endif %}
+
+    </div>
+{% endblock %}
