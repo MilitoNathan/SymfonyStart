@@ -8,7 +8,15 @@ home:
     path: /
     controller: App\Controller\HomeController::index
 
+product:
+    path: /products
+    controller: App\Controller\ProductController::index
+
 app_form:
     path: /form
     methods: [GET, POST]
     controller: App\Controller\FormController::index
+
+command:
+    path: /command
+    controller: App\Controller\CommandController::index

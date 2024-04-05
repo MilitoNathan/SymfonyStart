@@ -1,0 +1,37 @@
+{# templates/command/cart.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/command.css') }}">
+{% endblock %}
+
+{% block title %}Commandes{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="page shadowEffect">
+            <h1 class="shadowEffect">Vos commandes</h1>
+            {% for order in orders %}
+                <div class="order">
+                    <ul class="shadowEffect">
+                        {% for item in order.items %}
+                            <li>
+                                Produit: {{ item.product.label }}({{ item.product.price }}€)
+                                Quantité: {{ item.quantity }}
+                                Prix: {{ item.product.price * item.quantity }} €                            </li>
+                        {% endfor %}
+                        <h3>PRIX TOTAL DE LA COMMANDE : {{ order.totalPrice }} €</h3>
+                    </ul>
+                </div>
+            {% else %}
+                <p class="shadowEffect">Pas de commandes</p>
+            {% endfor %}
+
+            <a href="{{ path('command') }}" class="buttonStyle">Faire une nouvelle commande</a>
+            <form method="post" action="{{ path('app_clear_orders') }}">
+                <input type="submit" class="buttonStyle" value="Supprimer toutes les commandes">
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -13,7 +13,7 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig', [
             'pageTitle' => 'Bienvenue sur le projet !',
-            'message' => 'Mais c est le premier controller ?',
+            'message' => 'Ceci est la page d\'accueil du projet.',
             'path' => 'src/Controller/HomeController.php',
         ]);
     }

@@ -130,3 +130,132 @@ body {
 .edit-product-links .delete {
     background-color: #e74c3c;
 }
+
+.product-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.product-table td {
+    text-align: left;
+}
+
+.product-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.product-links .back {
+    background-color: #3498db;
+}
+
+.product-links .edit {
+    background-color: #2ecc71;
+}
+
+.product-links .delete {
+    background-color: #e74c3c;
+}
+
+/* Styles for New Product page */
+.new-product-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-product-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.new-product-form {
+    margin-bottom: 20px;
+}
+
+.new-product-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new-product-form input[type="text"],
+.new-product-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.new-product-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-product-form button:hover {
+    background-color: #2980b9;
+}
+
+.new-product-links {
+    text-align: center;
+}
+
+.new-product-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.new-product-links .back {
+    background-color: #3498db;
+}

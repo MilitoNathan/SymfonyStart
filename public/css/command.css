@@ -1,0 +1,40 @@
+.content{
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.page{
+    margin: 100px auto;
+    width: fit-content;
+    padding: 50px;
+}
+
+.shadowEffect{
+    border-radius: 27px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 10px #b1b1b1, -5px -5px 10px #ffffff;
+    padding: 20px;
+}
+
+.buttonStyle {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.buttonStyle:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #ff0000;
+}
