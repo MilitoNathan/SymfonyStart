@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/command.css') }}">
+{% endblock %}
+
+{% block title %}Hello CommandController!{% endblock %}
+
+{% block body %}
+
+    <div class="content">
+        <div class="page shadowEffect">
+
+            <h1 class="shadowEffect">Products</h1>
+
+            <form class="shadowEffect" method="post" action="{{ path('app_create_order') }}">
+                <ul>
+                    {% for product in products %}
+                        <li>
+                            {{ product.label }}, prix : {{ product.price }}
+                            <input type="hidden" name="product_id_{{ product.id }}" value="{{ product.id }}">
+                            Quantité :
+                            <input type="number" name="quantity_{{ product.id }}" min="0" value="0">
+                        </li>
+                    {% endfor %}
+                </ul>
+                <input type="submit" value="Créer une commande">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
